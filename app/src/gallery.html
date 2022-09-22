@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico')}}" type="image/x-icon" />
+
+  <meta name="description" content="A celebration of the good people in blockchain">
+  <meta property="description" content="A celebration of the good people in blockchain">
+  <meta name="keywords" content="crypto, web3, testnet, ether">
+  <meta property="og:title" content="Waterdrop">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="A celebration of the good people in blockchain">
+  <meta property="twitter:domain" content="">
+  <meta property="twitter:title" content="Waterdrop">
+  <meta property="twitter:description" content="A celebration of the good people in blockchain">
+  <meta property="twitter:image" content="">
+
+  <!-- ===== CSS Files ===== -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G7L86C0KLT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-G7L86C0KLT');
+  </script>
+  <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+
+
+
+  <!-- REPLACE THIS -->
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <!--Replace with tailwind.css once created-->
+  <link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet" />
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+    html {
+      font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+  </style>
+
+</head>
+
+<body class="bg-cover bg-gradient-to-r from-orange-200 to-cyan-900">
+
+
+
+  <!-- ==== Image gallery ==== -->
+  <section class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 m-4">
+    {% for image in images %}
+    <div class="flex flex-col justify-center items-center">
+      <a href='https://ipfs.io/ipfs/bafybeih56lk6istzo42eie4kpsoengalm73axfhmprylzdaazdhxgs7vmi/{{ image }}.json' class="w-full h-auto bg-gray-900 bg-opacity-75 mx-auto rounded-2xl transform transition hover:scale-105 duration-300 ease-in-out"><img src="/i/{{ image }}" alt="gallery"  class="w-full h-auto bg-gray-900 bg-opacity-75 mx-auto rounded-2xl transform transition hover:scale-105 duration-300 ease-in-out"/></a>
+    </div>
+
+    {% endfor %}
+  </section>
+  <!-- ==== End of image gallery ==== -->
+
+
+
+</body>
+
+<!-- ===== JS IDENTICONS ===== -->
+<!-- wow animations script -->
+<script src="/src/js/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
+<!-- wow animations end -->
+
+<!-- dev surprise :D -->
+<script>
+  // faucet ascii art
+  var art = `
+      =()=
+  ,/'\\_||_
+  ( (___  \`.
+  \`\\./  \`=='
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+         |||
+  `;
+  console.log(art);
+</script>
+<!-- dev surprise end -->
+
+
+</html>
